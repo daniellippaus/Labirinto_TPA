@@ -1,8 +1,10 @@
 public class Labirinto {
     private int[][] labirinto;
     private boolean[][] visitado;
-    private int[] direcaoX = {-1, 1, 0, 0}; // Movimentos: cima, baixo, esquerda, direita
-    private int[] direcaoY = {0, 0, -1, 1};
+
+    // Movimentos: cima, baixo, esquerda, direita e diagonais
+    private int[] direcaoX = {-1, 1, 0, 0, -1, -1, 1, 1}; 
+    private int[] direcaoY = {0, 0, -1, 1, -1, 1, -1, 1};
 
     // Construtor que recebe a matriz do labirinto
     public Labirinto(int[][] labirinto) {
@@ -28,8 +30,8 @@ public class Labirinto {
             return true;
         }
 
-        // Tenta todas as direções
-        for (int i = 0; i < 4; i++) {
+        // Tenta todas as direções, incluindo diagonais
+        for (int i = 0; i < 8; i++) {
             if (dfs(x + direcaoX[i], y + direcaoY[i], caminho)) {
                 return true;
             }
