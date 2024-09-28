@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Lê o arquivo CSV e carrega o labirinto
-            int[][] labirinto = LeitorCSV.lerArquivoCSV("src/labirinto.csv");
+            int[][] labirinto = LeitorCSV.lerArquivoCSV("src/labirinto_50x50.csv");
 
             // Cria uma instância da classe Labirinto
             Labirinto lab = new Labirinto(labirinto);
