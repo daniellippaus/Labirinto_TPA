@@ -11,4 +11,4 @@ Este programa resolve labirintos representados por matrizes de 0s e 1s, onde 0 r
 
 2. Compile o código:
    ```bash
-   javac Main.java Labirinto.java
+   javac Main.java Labirinto.java LeitorCSV.java
