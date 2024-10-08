@@ -1,9 +1,9 @@
 # Alunos
 <p>Daniel da Silva Lippaus</p>
-Lorenzzo Gabriel Ramos Doelinger Oliveira
+<p>Lorenzzo Gabriel Ramos Doelinger Oliveira</p>
 
 # Labirinto_TPA
-Trabalho para criar um código java que encontre o caminho correto de um labirinto
+Trabalho para criar um código java que encontre o caminho correto de um labirinto.
 
 # Resolvedor de Labirintos em Java
 
