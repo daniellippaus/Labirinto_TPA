@@ -1,5 +1,5 @@
 # Alunos
-Daniel da Silva Lippaus /p
+<p>Daniel da Silva Lippaus</p>
 Lorenzzo
 
 # Labirinto_TPA
