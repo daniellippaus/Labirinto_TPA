@@ -28,3 +28,9 @@ Este programa resolve labirintos representados por matrizes de 0s e 1s, onde 0 r
 6. Execute o código:
    ```bash
    javac Main
+
+### Observação
+Existem 6 opções de labirintos: 5x5, 10x10, 20x20, 30x30, 40x40 e 50x50.
+Se desejar testar diferentes tamanhos a alteração de caminho do arquivo deve ser feita no código Main.java linha 7
+   ```bash
+   int[][] labirinto = LeitorCSV.lerArquivoCSV("caminho/src/labirinto_desejado.csv");
