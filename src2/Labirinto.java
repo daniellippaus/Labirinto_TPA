@@ -12,6 +12,7 @@ public class Labirinto {
         this.visitado = new boolean[labirinto.length][labirinto[0].length];
     }
 
+    // Encontra o caminho do jogador no labirinto usando a busca em largura
     public LinkedList<Point> encontrarCaminho() {
         LinkedList<Point> caminho = new LinkedList<>();
         Queue<Point> fila = new LinkedList<>();
@@ -20,6 +21,7 @@ public class Labirinto {
 
         Point[][] pais = new Point[labirinto.length][labirinto[0].length];
 
+        // Enquanto houverem células na fila, continua a busca
         while (!fila.isEmpty()) {
             Point atual = fila.poll();
 
@@ -64,6 +66,7 @@ public class Labirinto {
         return null; // Nenhum caminho encontrado
     }
 
+    // Reconstrói o caminho a partir da célula final até a célula inicial.
     private LinkedList<Point> reconstruirCaminho(Point[][] pais, Point finalPoint) {
         LinkedList<Point> caminho = new LinkedList<>();
         for (Point p = finalPoint; p != null; p = pais[p.x][p.y]) {
