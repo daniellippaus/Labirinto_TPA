@@ -3,6 +3,7 @@ import java.awt.*;
 import java.util.Random;
 import java.util.LinkedList;
 
+// Classe que representa a interface gráfica de um labirinto e a animação do movimento de um jogador.
 public class LabirintoVisual extends JFrame {
     private int[][] labirinto;
     private JPanel[][] cells;
@@ -11,6 +12,7 @@ public class LabirintoVisual extends JFrame {
     private int index = 0; // Índice do próximo movimento
     private Random random = new Random();
 
+    // Construtor da classe LabirintoVisual.
     public LabirintoVisual(int[][] labirinto, LinkedList<Labirinto.Point> caminho) {
         this.labirinto = labirinto;
         this.cells = new JPanel[labirinto.length][labirinto[0].length];
@@ -19,12 +21,13 @@ public class LabirintoVisual extends JFrame {
         iniciarAnimacao();
     }
 
-
+    // Inicializa a interface gráfica do usuário (UI) do labirinto.
     private void initUI() {
         setTitle("Labirinto com Animação");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(labirinto.length, labirinto[0].length));
 
+        // Percorre cada célula do labirinto e cria os painéis correspondentes na interface gráfica.
         for (int i = 0; i < labirinto.length; i++) {
             for (int j = 0; j < labirinto[i].length; j++) {
                 cells[i][j] = new JPanel();
@@ -46,11 +49,13 @@ public class LabirintoVisual extends JFrame {
         setVisible(true);
     }
 
+    // Inicia a animação do movimento do jogador no labirinto.
     private void iniciarAnimacao() {
         Timer timer = new Timer(500, e -> moverJogador());
         timer.start();
     }
 
+    // Move o jogador para a próxima posição no caminho.
     private void moverJogador() {
         if (index >= caminho.size()) return; // Verifica se o caminho foi completado
 
